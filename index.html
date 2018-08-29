@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Cool places to eat!</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="reservation-nav navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <form role="search">
+            <div class="row">
+              <input id="search-box" type="text" autocomplete="off" class="search-bar form-control" placeholder="Search for Restaurants by Name, Cuisine, Location" name="q"/>
+            </div>
+          </form>
+        </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container align-top">
+    <div class="row">
+
+      <!-- search facets -->
+      <div class="all-facets col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div id="food-types" class='facet-section'>
+          <h6>Cuisine/Food Type</h6>
+          <div id="food-type-items" class="facet-items">
+          </div>
+        </div>
+        <div id="ratings" class='facet-section'>
+          <h6>Rating</h6>
+          <div id="rating-items" class="facet-items col-lg-9 rounded">
+          </div>
+        </div>
+        <div id="payments" class='facet-section'>
+          <h6>Payment Options</h6>
+          <div id="payment-items">
+          </div>
+        </div>
+      </div>
+      <!-- /search facets -->
+
+      <!-- records and performance stats -->
+      <div id="record-window" class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+        <div id="performance-stats">
+        </div>
+        <div id="underscore">
+        </div>
+        <div id="results">
+        </div>
+      </div>
+      <!-- /recrods and performance stats-->
+
+    </div>
+  </div>
+  <!-- /Page Content -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="bundle.js"></script>
+
+</body>
+
+</html>

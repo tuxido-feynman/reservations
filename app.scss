@@ -1,0 +1,87 @@
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.reservation-nav {
+  background-color: #00688B;
+  min-height: 80px;
+}
+
+#record-window {
+  padding-left: 40px;
+}
+
+#performance {
+  display: inline-block;
+  margin-top: 35px;
+}
+
+#underscore {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 50%; /* Change this to whatever width you want. */
+    position: relative;
+    top: -25px;
+    margin-left: 310px;
+    border-top: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+    border-color: #E8E8E8;
+}
+
+.all-facets {
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: #E8E8E8;
+  margin-top: 50px;
+}
+
+.facet-section {
+  margin-bottom: 30px;
+}
+
+.facet-select {
+  background-color: #10aad1;
+  color: white;
+}
+
+.reservation-card {
+  border: none;
+  margin-top: 20px;
+}
+
+.star-full {
+  color: orange;
+}
+
+.star-half-full {
+  color: orange;
+}
+
+.star-empty {
+  color: #E8E8E8
+}
+
+.star-select {
+  background-color: #10aad1;
+}
+
+.star-rating {
+  color: orange;
+}
+
+.reservation-img {
+  margin-right: 10px;
+  max-width: 100px;
+  height: 100px;
+}
+
+#show-more-btn {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  width: 30%;
+}

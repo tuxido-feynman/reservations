@@ -1,0 +1,46 @@
+Answer 1
+
+Hi George, 
+
+Great questions. If you could provide me with some information about your specific use case I’d be happy to help you with concrete examples and suggestions for your data.
+
+What kind of things are your users searching for? and what is the context of these searches? Example: Users trying to make a reservation are searching for restaurants, or users at my company are searching for people at the company… etc
+Could you provide an example search query and the expected response for a user on your system?
+
+Generally here are what those terms mean:
+
+Record - This is what your users are searching for, on Google a record would be a website, on Ebay an item someone is selling. Records in Algolia are represented as JSON objects that contain the attributes that describe that object. So for Ebay the attributes would include a description of the item, pictures, a title, pricing info, etc… you will need to provide records to Algolia for indexing.
+
+Indexing - This is just a special way of saving data that makes it searchable, you don’t have to worry about the specifics of how this data is saved to use Algolia, instead we handle that on the backend and provide an API for you to send us your data for indexing. To get up and running quickly we also provide a UI on your dashboard for indexing new records, both methods are described here: https://www.algolia.com/doc/guides/indexing/indexing-overview/
+If you are interested in the technical details of our indexing and ranking strategies let me know and I’ll be happy to follow up with more information.
+
+Custom Ranking Metrics - This is very dependent on the nature of your data, and how your users are using search on your site. Generally we use custom ranking to break ties between records that otherwise identically match a query. For example, if I have a site that lets users search for movie actors and directors and a user searches for “Steve McQueen” I would return two records, one for the actor in The Great Escape, and another for the director of 12 years a slave. In my case I assume most users are searching for actors and not directors, so I might use a boolean isActor with a custom ranking to return the actor first.
+
+I hope that clears up some of your questions George, and like I said, I’d be happy to discuss these topics in concrete terms as they relate to your project if you can send some more information on your usecase.
+
+Happy searching,
+Adam
+Answer 2
+Hi Matt, thanks a ton, this kind of feedback is crucial for our UX team to consider and I’ll pass this along to them, and follow up with you. 
+
+In the meantime it sounds like you may benefit from using our API directly during rapid iteration. I’d be happy to jump on a call to learn more about your use case and share some best practices. Do you have availability this afternoon or tomorrow morning?
+
+Best,
+
+Adam
+
+Answer 3
+Hi Leo,
+Glad to hear you are considering Algolia for your site, we’ve put in a lot of work to streamline the process of getting up and running with Algolia, and using it in your project for the first time generally follow this outline.
+
+Identify and format the data you want to make searchable - typically this data resides in a database, or local file, this will need to be in JSON format and we’ll make sure all of the important attributes of the data are present.
+Send the data to Algolia - if the data is static this is a one time task, if the data is updated regularly, you’ll want to send data to Algolia in regular batches, so new data is always searchable, we provide an API for programmatic uploads, and a UI on our site for this. 
+Tune ranking rules - we have reasonable default ranking rules in place for most use cases, but we should review these rules for your specific project, ranking will determine how search queries are matched to records, the data your users are searching for. We provide both an API and a UI for tuning ranking.
+Changes to your site - minimally you’ll need to add the Algolia javascript library to your website, and a search bar that triggers search queries to the Algolia API, from there we can add filters on categories in your data.
+
+I recommend checking out some of the tutorials and overviews on our site if you haven’t already, here’s one for getting up and running with a test dataset very quickly → https://www.algolia.com/doc/tutorials/search-ui/instant-search/build-an-instant-search-results-page/instantsearchjs/
+
+And definitely reach out with more questions, I’d love to hear more about your project and how we can help,
+
+All the best,
+Adam
